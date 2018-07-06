@@ -1,7 +1,6 @@
 import { getLogger } from 'domain/logger';
 import { getQuote } from 'domain/middleware/network';
 import { updateQuote } from 'domain/store/reducers/main';
-import { Quote } from 'domain/store/main';
 
 const logger = getLogger('@middleware/user');
 

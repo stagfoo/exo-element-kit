@@ -1,5 +1,4 @@
 import { getLogger } from 'domain/logger';
-import { App } from 'components/container/app/app';
 
 const logger = getLogger('Renderer');
 

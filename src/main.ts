@@ -1,4 +1,4 @@
-import { state, defaultState } from 'domain/store/main';
+import { defaultState } from 'domain/store/main';
 import render from 'renderer';
 import { updateCustomElementAttribute } from 'domain/store/reducers/main';
 import exoElementConfig from '../exo-element.config';
