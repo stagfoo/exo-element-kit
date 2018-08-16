@@ -21,11 +21,12 @@ class ExoElement extends HTMLElement {
 
   constructor() {
     super();
-
+    this.attachShadow({ mode: "open" }); //<- Create our shadowRoot
+    const htmlMount = document.createElement('div');
+    this.shadowRoot.appendChild(htmlMount);
     logger.debug('Initialising');
     this.store = createAtom(defaultState);
-
-    const _render = _.partial(render, this);
+    const _render = _.partial(render, this); //<- this.shado
     this.store.addWatch('renderLoop', _render);
     if ((module as any).hot) (module as any).hot.accept('renderer.tsx', _render);
   }
